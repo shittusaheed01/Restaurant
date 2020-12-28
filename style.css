@@ -21,42 +21,31 @@ h1,h2,h3,h4,h5,h6{
   margin: 0;
 }
 header{
-  width: 100%;
   display: flex;
   justify-content: space-between;
   background-color: #595457;
   color: white;
-  opacity: 0.8;
+  opacity: 0.9;
   align-items: center;
   padding: 1em;
   /* height: 60px; */
 }
 #img-div{
-  width: 30%;
+  width: 50%;
   max-width: 200px;
 }
 header img{
-  margin-top: 1em;
-  width: 90%;
+  width: 100%;
+  overflow: hidden;
 }
-nav ul{
-  display: flex;
+
+header ul{
+  display: none;
   margin: 0 1em;
+  width: 50%;
+  justify-content: space-between;
 }
-a{
-  font-size: 1.2rem;
-  color: white;
-  margin: 0 0.5em;
-  padding: 0.5em;
-}
-.active,
-nav a:hover,
-nav a:focus{
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  color: bisque;
-  transition: all ease 0.6s;
-}
+
 #land{
   background-image: linear-gradient(rgba(160,62,153, 0.6),rgba(94,100,114,0.6)), url("./images/friends-581753_1920.jpg");
   background-size: cover;
@@ -183,6 +172,7 @@ iframe{
 
 
 /* Menu */
+
 #menu-1{
   display: flex;
   flex-direction: column;
@@ -255,4 +245,85 @@ iframe{
 #contact-section a:focus{
   color: #241623;
   transition: all ease 0.6s;
+} 
+
+
+
+
+.menu-items{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  background-color: tomato;
+  align-items: center;
+  transform: translateX(-100vw);
+  transition: transform ease-in-out 0.6s;
+  opacity: 1;
+}
+.menu-items.open{
+  transform: translateX(0);
+  opacity: 1;
+}
+.menu-btn{
+  width: 90%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aliceblue; */
+  position: relative;
+  z-index: 2;
+  display: none;
+}
+
+.menu-lines::before,
+.menu-lines::after{
+  content: "";
+}
+
+.menu-lines,
+.menu-lines::before,
+.menu-lines::after{
+  height: 5px;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  background-color: aqua;
+  width: 90%;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menu-lines::before{
+  transform: translateY(-15px);
+  width: 45px;
+  
+}
+.menu-lines::after{
+  transform: translateY(15px);
+  width: 45px;
+}
+
+.menu-btn.open .menu-lines{
+  transform: translateX(-30px);
+  background-color: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-lines::before{
+  transform: rotate(45deg) translate(20px, -20px);
+}
+.menu-btn.open .menu-lines::after{
+  transform: rotate(-45deg) translate(20px, 20px);
 }

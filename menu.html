@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Item 7 | Menu</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header>
-      <div id="img-div"><img src="./images/LogoMakr-7AHbTX.png" alt="" /></div>
-      <nav>
-        <ul>
-          <li><a href="./index.html">HOME</a></li>
-          <li><a href="./menu.html">MENU</a></li>
-          <li><a href="#">ORDER</a></li>
-          <li><a href="./contact.html">CONTACT</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div id="img-div"><img src="./images/LogoMakr-7AHbTX.png" alt=""></div>
+    <div class="menu-btn">
+      <div class="menu-lines"></div>
+    </div>
+      <ul class="menu-items">
+        <li><a href="./index.html">HOME</a></li>
+        <li><a class="active"  href="./menu.html">MENU</a></li>
+        <li><a href="#">ORDER</a></li>
+        <li><a href="./contact.html">CONTACT</a></li>
+      </ul>
+  </header>
     <section id="menu-1">
       <div class="menu-1-img">
         <img src="./images/pexels-rajesh-tp-1624487.jpg" alt="fried-chicken" />
@@ -96,5 +98,6 @@
         <p>Ilorin, Kwara State</p>
       </div>
     </footer>
+    <script src="./main.js"></script>
   </body>
 </html>
