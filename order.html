@@ -6,7 +6,6 @@
   <title>Item 7 | Order</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -23,46 +22,76 @@
   </header>
   <section id="order-section">
     <div class="order-img-container">
-      <div class="order-img">
+      <div class="order-options">
+        <div class="check-div">
+        <input type="checkbox" class="checks" name="" id="checks">
+        <label for="checks">
+        <div class="img-container">
         <img src="./images/shawarma-4029889_1920.jpg" alt="">
+        </div>
         <p>Sharwama</p>
-        <p>#500</p>
-        <button class="bg-red-400  w-64 block m-auto text-center cursor-pointer p-4 hover:bg-red-300 text-red-900 text-2xl">Add To Cart</button>
+          <p class="price">#400</p>
       </div>
-      <div class="order-img">
-        <img src="./images/jollof-4659747_1920.jpg" alt="">
-        <p>Sharwama</p>
-        <p>#500</p>
-        <button class="bg-red-400  w-64 block m-auto text-center cursor-pointer p-4 hover:bg-red-300 text-red-900 text-2xl">Add To Cart</button>
+        <div class="quantity">
+          <p>Quantity:</p>
+          <input class="quantities" type="number">
+        </div>
+        </label>
       </div>
-      <div class="order-img">
-        <img src="./images/fried-chicken-690039_1920.jpg" alt="">
-        <p>Sharwama</p>
-        <p>#500</p>
-        <button class="bg-red-400  w-64 block m-auto text-center cursor-pointer p-4 hover:bg-red-300 text-red-900 text-2xl">Add To Cart</button>
-      </div>
-      <div class="order-img">
+      <div class="order-options">
+        <div class="check-div">
+        <input type="checkbox" name="" class="checks" id="first">
+        <label for="first">
+        <div class="img-container">
         <img src="./images/burger-1553287_1920.jpg" alt="">
+        </div>
         <p>Sharwama</p>
-        <p>#500</p>
-        <button class="bg-red-400  w-64 block m-auto text-center cursor-pointer p-4 hover:bg-red-300 text-red-900 text-2xl">Add To Cart</button>
+          <p class="price">#200</p>
       </div>
-      <div class="order-img">
-        <img src="./images/shawarma-4029889_1920.jpg" alt="">
+        <div class="quantity">
+          <p>Quantity:</p>
+          <input class="quantities"  type="number">
+        </div>
+        </label>
+      </div>
+      <div class="order-options">
+        <div class="check-div">
+        <input type="checkbox" class="checks"  name="" id="second">
+        <label for="second">
+        <div class="img-container">
+        <img src="./images/jollof-4659747_1920.jpg" alt="">
+        </div>
         <p>Sharwama</p>
-        <p>#500</p>
-        <button class="bg-red-400  w-64 block m-auto text-center cursor-pointer p-4 hover:bg-red-300 text-red-900 text-2xl">Add To Cart</button>
+          <p class="price">#700</p>
       </div>
-    </div>
-  </section>
-  <section id="cart">
-    <div>
-      <h3>CART</h3>
-      <div>
-        
+        <div class="quantity">
+          <p>Quantity:</p>
+          <input class="quantities"  type="number">
+        </div>
+        </label>
       </div>
-    </div>
-  </section>
+      <div class="order-options">
+        <div class="check-div">
+        <input type="checkbox" class="checks"  name="" id="third">
+        <label for="third">
+        <div class="img-container">
+        <img src="./images/fried-chicken-690039_1920.jpg" alt="">
+        </div>
+        <p>Sharwama</p>
+          <p class="price">#1000</p>
+      </div>
+        <div class="quantity">
+          <p>Quantity:</p>
+          <input class="quantities"  type="number">
+        </div>
+        </label>
+      </div>
+      <div class="last-div">
+        <p>Total: <span id="total">#0</span></p>
+        <button id="purchase">Purchase</button>
+      </div>
+      </div>
+      </section>
   <script src="main.js"></script>
 </body>
 </html>
